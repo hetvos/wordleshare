@@ -1,0 +1,28 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="output.css">
+
+<body class="bg-gradient-to-tl from-slate-800 to-slate-900 w-full h-full">
+<div class="flex flex-col w-fit items-center content-center justify-center justify-content-center h-full m-auto">
+	<div class="absolute left-0 p-[10px] p-l-[6px] rounded-[20px] rounded-l-none bg-gradient-to-bl from-slate-700 to-slate-800">
+		<textarea placeholder="Paste Wordle results here" autocomplete=off id="results" class="overflow-hidden resize-none h-[140px] w-[140px] bg-zinc-800 text-[#eee] p-[4px] leading-none rounded-[5px]"></textarea>
+	</div>
+
+	<canvas hidden id="resultcanvas" height="310" width="244"></canvas>
+
+	<div class="p-[10px] bg-gradient-to-bl from-slate-700 to-slate-800 rounded-[10px]">
+		<img id="resultimg">
+	</div>
+
+	<div class="p-[9px] bg-gradient-to-bl from-slate-700 to-slate-800 rounded-[20px] rounded-r-none absolute right-0">
+		<input type="checkbox" id="colorblind">
+		<label class="select-none text-slate-100" for="colorblind">Colorblind Mode</label>
+		<br>
+		<input type="checkbox" id="light">
+		<label class="select-none text-slate-100" for="light">Light Theme</label>
+	</div>
+</div>
+</body>
+
+<script src="index.js"></script>
