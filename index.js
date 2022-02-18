@@ -1,14 +1,3 @@
-/*
-Wordle 242 6/6
-
-⬛🟩⬛🟩⬛
-⬛🟩🟨⬛⬛
-⬛🟩⬛🟩⬛
-⬛🟩⬛🟩⬛
-🟩⬛⬛🟨⬛
-🟩🟩🟩🟩🟩
-*/
-
 var results = document.getElementById("results")
 
 function getResults(){
@@ -53,7 +42,9 @@ function drawCanvas(results){
 	map = {...themes[theme],...colors[color]}
 	var canvas = document.getElementById("resultcanvas")	
 	var ctx = canvas.getContext("2d")
-	height = 22+48*results[0].split(" ")[2][0]
+	lines = results[0].split(" ")[2][0]
+	if(lines == "X") lines = 6;
+	height = 22+48*lines
 	canvas.height=height
 	ctx.clearRect(-1,-1,69420,69420)
 	ctx.fillStyle=map["BG"]
